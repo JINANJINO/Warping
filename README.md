@@ -42,3 +42,45 @@ In **computer vision**, filtering and warping are two fundamental techniques for
     - Applying a perspective transform to make a tilted object appear as if viewed from directly above.
     - Correcting lens distortion in a photograph.
 ---
+## 1. Coordinate Transformation
+
+<img width="273" height="267" alt="image" src="https://github.com/user-attachments/assets/58214b16-3e13-496c-849b-884f6a057724" />
+
+The goal is to find a matrix that transforms a point $$P(x, y)$$ to a new point $$P'(x', y')$$ by rotating it counter-clockwise around the origin by an angle $$θ$$. The derivation relies on basic trigonometry.
+
+*1. Define the Initial Point using Trigonometry*
+
+First, let's express the coordinates of our initial point $$P(x, y)$$ using polar coordinates.
+Let $$r$$ be the distance from the origin to the point $$P$$, and let $$ϕ$$ (phi) be the angle that the line segment from the origin to P makes with the positive x-axis.
+
+From basic trigonometry, we can define $$x$$ and $$y$$ as:
+
+$$x=rcos(ϕ)$$
+$$y=rsin(ϕ)$$
+
+*2. Define the Rotated Point*
+
+Now, we rotate the point $$P$$ by an angle $$θ$$ to get the new point $$P'(x', y')$$.
+The rotation is around the origin, so the distance $$r$$ from the origin remains the same. The new angle with the positive x-axis is the original angle $$ϕ$$ plus the rotation angle $$θ$$.
+
+So, the new coordinates $$x'$$ and $$y'$$ can be expressed as:
+
+$$x′=rcos(ϕ+θ)$$
+$$y'=rsin(ϕ+θ)$$
+
+*3. Apply Angle Sum Identities*
+
+To connect the new coordinates $$(x', y')$$ with the original ones $$(x, y)$$, we use the trigonometric angle sum identities:
+
+- $$cos(A+B)=cosAcosB−sinAsinB$$
+- $$sin(A+B)=sinAcosB+cosAsinB$$
+
+*4. Formulate the Rotation Matrix*
+
+We now have a system of two linear equations:
+$$x′=xcosθ−ysinθ$$
+$$y′=xsinθ+ycosθ$$
+
+This system can be written in matrix form, $$P′=RP$$, where $$R$$ is the ```rotation matrix```.
+
+
