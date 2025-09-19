@@ -249,6 +249,7 @@ if __name__ == "__main__":
 ```
 
 **result**
+
 <img width="568" height="270" alt="image" src="https://github.com/user-attachments/assets/04ef9582-4128-4eec-800e-ca56567fdcfe" />
 
 ---
