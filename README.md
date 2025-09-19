@@ -83,4 +83,11 @@ $$y′=xsinθ+ycosθ$$
 
 This system can be written in matrix form, $$P′=RP$$, where $$R$$ is the ```rotation matrix```.
 
+$$
+\begin{array}{cc}
+    A = \begin{bmatrix} 0 & 1 \\\\ 0 & 0 \end{bmatrix} & B = \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \\\\
+    C = \begin{bmatrix} 1 & 0 \end{bmatrix} & D = 0
+\end{array}
+$$
+
 
