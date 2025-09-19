@@ -83,11 +83,18 @@ $$y′=xsinθ+ycosθ$$
 
 This system can be written in matrix form, $$P′=RP$$, where $$R$$ is the ```rotation matrix```.
 
+$$\begin{pmatrix} x' \\\\ y' \end{pmatrix}
+=\begin{pmatrix}
+\cos\theta & -\sin\theta \\\\
+\sin\theta & \cos\theta
+\end{pmatrix}
+\begin{pmatrix} x \\\\ y \end{pmatrix}
 $$
-\begin{array}{cc}
-    A = \begin{bmatrix} 0 & 1 \\\\ 0 & 0 \end{bmatrix} & B = \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \\\\
-    C = \begin{bmatrix} 1 & 0 \end{bmatrix} & D = 0
-\end{array}
+
+Thus, the 2D counter-clockwise rotation matrix $$R$$ is:
+
+$$
+R = \begin{bmatrix} \cos\theta & -\sin\theta \\\\ \sin\theta & \cos\theta \end{bmatrix}
 $$
 
 
