@@ -97,4 +97,42 @@ $$
 R = \begin{bmatrix} \cos\theta & -\sin\theta \\\\ \sin\theta & \cos\theta \end{bmatrix}
 $$
 
+For robotics and autonomous vehicles utilizing a robot-centric coordinate system, the focus shifts from a mere Rotation Matrix derivation to understanding the direct coordinate transformation equations for ego-centric frame conversions.
 
+<img width="328" height="246" alt="image" src="https://github.com/user-attachments/assets/30ef7098-3e1d-450f-a099-e79c3575675e" />
+
+This equation is specifically used in robotics and autonomous vehicles to convert the coordinates of a point observed in a robot-centric coordinate system $$(x,y)$$ to its corresponding coordinates in an external, fixed global coordinate system (e.g., world frame, $$(x′,y′)$$).
+
+$$\begin{pmatrix} x' \\\\ y' \end{pmatrix}=
+\begin{pmatrix}
+\cos\theta & -\sin\theta \\\\
+\sin\theta & \cos\theta
+\end{pmatrix}
+\begin{pmatrix} x \\\\ y \end{pmatrix}
+$$
+
+- **Left Side**
+
+$$
+\begin{pmatrix} x' \\\\ y' \end{pmatrix}
+$$
+
+Represents the position of the point in the **Global Coordinate System (Global Frame)**. These are the absolute coordinates we want to determine.
+
+- **Right Side**
+
+$$
+\begin{pmatrix} x \\\\ y \end{pmatrix}
+$$
+
+Represents the position of the point as observed or measured within the **Robot-Centric Coordinate System (Robot Frame)**. For example, this could be the relative position reported by a robot's sensor (like a camera or LiDAR) with respect to the robot's own origin.
+
+- **Central Matrix**
+
+$$\begin{pmatrix}
+\cos\theta & \sin\theta \\\\
+-\sin\theta & \cos\theta
+\end{pmatrix}
+$$
+
+This matrix is the rotation matrix that performs the transformation from the robot's local frame to the global frame.
