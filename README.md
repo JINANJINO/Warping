@@ -99,7 +99,7 @@ $$
 
 For robotics and autonomous vehicles utilizing a robot-centric coordinate system, the focus shifts from a mere Rotation Matrix derivation to understanding the direct coordinate transformation equations for ego-centric frame conversions.
 
-<img width="328" height="246" alt="image" src="https://github.com/user-attachments/assets/30ef7098-3e1d-450f-a099-e79c3575675e" />
+![Rotation Formula](1000019378.jpg)
 
 This equation is specifically used in robotics and autonomous vehicles to convert the coordinates of a point observed in a robot-centric coordinate system $$(x,y)$$ to its corresponding coordinates in an external, fixed global coordinate system (e.g., world frame, $$(x′,y′)$$).
 
